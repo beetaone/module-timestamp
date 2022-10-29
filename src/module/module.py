@@ -6,16 +6,9 @@ Edit this file to implement your module.
 """
 
 from logging import getLogger
-import os
-import time
-from datetime import datetime
-import pytz
 
 log = getLogger("module")
 
-__TIMESTAMP_LABEL__ = os.getenv("TIMESTAMP_LABEL", "timestamp")
-__FORMAT__ = os.getenv("FORMAT", "Epoch")
-__TIMEZONE__ = os.getenv("TIMEZONE", "CET")
 
 def module_main(received_data: any) -> [any, str]:
     """
@@ -34,18 +27,11 @@ def module_main(received_data: any) -> [any, str]:
     log.debug("Processing ...")
 
     try:
-        if __FORMAT__.lower() == "epoch":
-            timestamp = time.time()
-        else:
-            timestamp = datetime.now(pytz.timezone(__TIMEZONE__)).strftime(__FORMAT__)
+        # YOUR CODE HERE
 
-        if type(received_data) == list:
-            for data in received_data:
-                data[__TIMESTAMP_LABEL__] = timestamp
-        else:
-            received_data[__TIMESTAMP_LABEL__] = timestamp
+        processed_data = received_data
 
-        return received_data, None
+        return processed_data, None
 
     except Exception as e:
         return None, f"Exception in the module business logic: {e}"
