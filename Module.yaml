@@ -4,7 +4,7 @@ description: 'Add timestamp to your data.'
 versionName: 'v1.0.0'
 isPublic: true
 categories:
-  - 'Time'
+  - 'Timer'
 type: 'Processing'
 image:
   name: 'weevenetwork/timestamp'
