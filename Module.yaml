@@ -1,14 +1,14 @@
 displayName: 'Timestamp'
 moduleName: 'timestamp'
 description: 'Add timestamp to your data.'
-versionName: 'v1.0.0'
+versionName: 'v1.0.1'
 isPublic: true
 categories:
   - 'Timer'
 type: 'Processing'
 image:
   name: 'weevenetwork/timestamp'
-  tag: 'v1.0.0'
+  tag: 'v1.0.1'
   homepage: 'https://hub.docker.com/r/weevenetwork/timestamp'
 repository: 'https://github.com/weeve-modules/timestamp'
 envs:

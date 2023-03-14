@@ -3,7 +3,7 @@
 |                |                                       |
 | -------------- | ------------------------------------- |
 | Name           | Timestamp                           |
-| Version        | v1.0.0                                |
+| Version        | v1.0.1                                |
 | DockerHub | [weevenetwork/timestamp](https://hub.docker.com/r/weevenetwork/timestamp) |
 | Authors        | Jakub Grzelak                    |
 
