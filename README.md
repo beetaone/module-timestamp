@@ -4,7 +4,7 @@
 | -------------- | ------------------------------------- |
 | Name           | Timestamp                           |
 | Version        | v1.0.1                                |
-| DockerHub | [weevenetwork/timestamp](https://hub.docker.com/r/weevenetwork/timestamp) |
+| DockerHub | [beetaone/timestamp](https://hub.docker.com/r/beetaone/timestamp) |
 | Authors        | Jakub Grzelak                    |
 
 - [Timestamp](#timestamp)
@@ -12,7 +12,7 @@
   - [Timestamp Format](#timestamp-format)
   - [Environment Variables](#environment-variables)
     - [Module Specific](#module-specific)
-    - [Set by the weeve Agent on the edge-node](#set-by-the-weeve-agent-on-the-edge-node)
+    - [Set by the beetaone Agent on the edge-node](#set-by-the-beetaone-agent-on-the-edge-node)
   - [Dependencies](#dependencies)
   - [Input](#input)
   - [Output](#output)
@@ -43,7 +43,7 @@ Build your own date and time format using the following directives (source: Pyth
 | %U | Week number of the year (Sunday as the first day of the week) as a zero-padded decimal number. All days in a new year preceding the first Sunday are considered to be in week 0. | 00, 01, …, 53 |
 | %W | Week number of the year (Monday as the first day of the week) as a zero-padded decimal number. All days in a new year preceding the first Monday are considered to be in week 0. | 00, 01, …, 53 |
 
-Below are examples of what can be typed into module configuration pane in weeve IoT Platform and their output:
+Below are examples of what can be typed into module configuration pane in beetaone IoT Platform and their output:
 
 * `epoch` -> 1655723915
 * `%d-%b-%Y %H:%M:%S.%f` -> 29-Oct-2022 12:03:00.820003
@@ -54,7 +54,7 @@ Below are examples of what can be typed into module configuration pane in weeve 
 
 ### Module Specific
 
-The following module configurations can be provided in a data service designer section on weeve platform:
+The following module configurations can be provided in a data service designer section on beetaone platform:
 
 | Name                 | Environment Variables     | type     | Description                                              |
 | -------------------- | ------------------------- | -------- | -------------------------------------------------------- |
@@ -63,9 +63,9 @@ The following module configurations can be provided in a data service designer s
 | Timezone    | TIMEZONE         | string  | Select your timezone. See [Supported Timezones](#supported-timezones)            |
 
 
-### Set by the weeve Agent on the edge-node
+### Set by the beetaone Agent on the edge-node
 
-Other features required for establishing the inter-container communication between modules in a data service are set by weeve agent.
+Other features required for establishing the inter-container communication between modules in a data service are set by beetaone agent.
 
 | Environment Variables | type   | Description                                    |
 | --------------------- | ------ | ---------------------------------------------- |
@@ -125,7 +125,7 @@ Output of this module is the same object as input but with added timestamp field
 }
 ```
 
-Here `TIMESTAMP_LABEL` and `FORMAT` are specified in module configuration pane on weeve IoT Platform.
+Here `TIMESTAMP_LABEL` and `FORMAT` are specified in module configuration pane on beetaone IoT Platform.
 
 So the sample output could be:
 
